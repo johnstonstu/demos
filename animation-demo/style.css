@@ -1,0 +1,76 @@
+.battery {
+  animation: charge 2s steps(5) paused;
+  background-image: url("Screen Shot 2018-04-26 at 11.13.54 AM.png");
+  background-position: -480px 0;
+  height: 100px;
+  width: 120px;
+}
+
+.battery-animate {
+  animation-play-state: running;
+}
+
+@keyframes charge {
+  from {
+    background-position: 0px 0;
+  }
+  to {
+    background-position: -600px 0;
+  }
+}
+button {
+  background: red;
+  height: 5rem;
+  width: 200px;
+  border-radius: 25px;
+  font-size: 2rem;
+  margin-right: 4rem;
+}
+button:hover,
+button:focus {
+  background: green;
+  transition: 4s;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  85% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+input.wiggle {
+  display: inline-block;
+  animation: wiggle 2.5s infinite;
+}
+
+input.wiggle:hover {
+  animation: none;
+}
+
+.wiggle {
+  transform: scale(3);
+  margin-top: 5rem;
+  width: 200px;
+  background-color: blue;
+  border-radius: 15px;
+  border: 2px solid black;
+}
